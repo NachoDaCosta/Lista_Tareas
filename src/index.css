@@ -1,13 +1,148 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.todoContainer {
+  height: 100vh;
+  background: #9dc09d;
+  background-size: 100% 100%;
+  display: grid;
+  grid-template-rows: 30% 70%;
+  justify-items: center;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.inputTareas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 30% 70%;
+  gap: 30px;
+}
+
+.inputTareas span {
+  color: #fef6cd;
+  font-weight: bolder;
+  letter-spacing: 8px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.inputTareas form {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.todoInput {
+  width: 300px;
+  border: none;
+  border-radius: 40px;
+  padding: 7px;
+  text-align: center;
+}
+
+.todoInput :hover,
+:focus {
+  outline: none;
+}
+
+.buttonCreate {
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  background-color: #3f8880;
+  color: #fef6cd;
+  font-weight: bolder;
+}
+
+.todosContainer {
+  padding: 10px;
+  overflow-y: scroll;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  gap: 15px;
+}
+
+.todo {
+  /*TAREA INDIVIDUAL*/
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  align-content: center;
+}
+
+.todoInfo {
+  /*fila con el div de tareas*/
+  height: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  color: #fef6cd;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.todoInfo span {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.botones {
+  /*DIV DE LOS BOTONES*/
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  gap: 10px;
+}
+
+.button-edit-task {
+  cursor: pointer;
+  background-color: #3f8880;
+  color: #fef6cd;
+  font-weight: bolder;
+  width: 30%;
+  border: none;
+  border-radius: 30px;
+}
+
+.button-delete-task {
+  cursor: pointer;
+  background-color: #20c67a;
+  color: #fef6cd;
+  font-weight: bolder;
+  width: 30%;
+  border: none;
+  border-radius: 30px;
+}
+
+.button-Update {
+  cursor: pointer;
+  background-color: #3f8880;
+  color: #fef6cd;
+  font-weight: bolder;
+  width: 50%;
+  border: none;
+  border-radius: 30px;
+}
+
+.todoUpdateForm {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.todoInputEdit {
+  position: relative;
+  left: 200px;
+  width: 50%;
+  border: none;
+  border-radius: 40px;
+  padding: 7px;
+  text-align: center;
 }
