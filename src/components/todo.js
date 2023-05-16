@@ -11,6 +11,7 @@ export default function Todo ({item,onUpdate,onDelete}) {
 
         function handleChange(e){           //FUNCION PARA CAMBIAR EL VALOR DEL TITULO
             const value=e.target.value;
+
             setNewValue(value);
         }
 
@@ -21,7 +22,7 @@ export default function Todo ({item,onUpdate,onDelete}) {
 
         return(
             <form className="todoUpdateForm" onSubmit={handleSubmit}> {/*ACA RETORNO UN FORMULARIO PARA EL EDIT */}
-                <input type="text" className="todoInputEdit" onChange={handleChange} value={newValue}/>  
+                <input type="text" className="todoInputEdit" onChange={handleChange} placeholder="edite su tarea" value={newValue}/>  
                 <button className="button-Update" onClick={handleClickUpdateTodo}>Actualizar</button>
             </form>
         )
