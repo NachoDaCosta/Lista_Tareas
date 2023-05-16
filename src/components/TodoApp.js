@@ -34,7 +34,7 @@ const TodoApp=()=>{
         setTodos(temp)
     }
 
-    function handleDelete(id){
+    function handleDelete(id){    //BUSCO EL ELEMENTO DEL ARRAY PARA BORRARLO POR SU ID
         const temp=todos.filter(item=> item.id!==id);
         setTodos(temp)
     }
