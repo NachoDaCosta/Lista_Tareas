@@ -25,6 +25,20 @@ export default function Todo ({item,onUpdate,onDelete}) {
                 <button className="button-Update" onClick={handleClickUpdateTodo}>Actualizar</button>
             </form>
         )
+
+        
+    }
+    function chequeo(titulo){
+        if (titulo===""){
+            return(
+                "tarea vacía, editela o borrela"
+            )
+        }
+        else{
+            return(
+                titulo
+            )
+        }
     }
 
     
@@ -32,7 +46,9 @@ export default function Todo ({item,onUpdate,onDelete}) {
     function TodoElement(){
         return(
             <div className="todoInfo">  {/*ACA RETORNO EL HTML DE LA TAREA*/}
-                    <span>{item.title}</span>
+                    <span>
+                        {chequeo(item.title)}
+                    </span>
                     <div className="botones">
                         <button className="button-edit-task" onClick={()=>setIsEdit(true)}>Editar</button>
                         <button className="button-delete-task" onClick={(e)=>onDelete(item.id)}>Borrar</button>
