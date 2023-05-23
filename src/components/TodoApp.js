@@ -13,7 +13,6 @@ const TodoApp=()=>{
 
     function handleSumbmit(e){   //FUNCION PARA PUBLICAR UNA TAREA
         e.preventDefault();
-        
         const newTodo={   //CREACION DE LA TAREA CON SUS PARAMETROS
             id:crypto.randomUUID(),
             title: title,
@@ -44,7 +43,7 @@ const TodoApp=()=>{
             <div className="inputTareas">
                 <span>📝 Lista de Tareas 📝</span>
                 <form onSubmit={handleSumbmit}>
-                    <input onChange={handeChange} className="todoInput" value={title} placeholder="Añade una tarea no vacía"/>
+                    <input onChange={handeChange} className="todoInput" value={title} placeholder="Añade una tarea "/>
                     <input 
                         onClick={handleSumbmit}
                         type="submit" 
@@ -56,7 +55,10 @@ const TodoApp=()=>{
             <div className="todosContainer">  {/*ARRAY CON LA TAREAS QUE TENGO ALMACENADAS */}
                 {
                     todos.map(item=>(
-                        <Todo item={item} onUpdate={handleUpdate} onDelete={handleDelete}/>  //ahora todo vive dentro del todo
+                        <Todo item={item}  
+                            onUpdate={handleUpdate} 
+                            onDelete={handleDelete} 
+                        />  //ahora todo vive dentro del todo
                     ))
                 }
             </div>

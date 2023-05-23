@@ -2,12 +2,13 @@
 
 *{
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background-color: #9dc09d;
+    background-repeat: no-repeat;
+    margin: 0;
 }
 
 .todoContainer {
   height: 100vh;
-  background: #9dc09d;
-  background-size: 100% 100%;
   display: grid;
   grid-template-rows: 30% 70%;
   justify-items: center;
@@ -38,12 +39,15 @@
 }
 
 .todoInput {
+  background-color: rgba(255, 255, 255, 0.6);
   width: 300px;
   border: none;
   border-radius: 40px;
   padding: 7px;
   color: black !important;
   text-align: center;
+  font-weight: bolder;
+    letter-spacing: 3px;
 }
 
 .todoInput :hover,
@@ -61,7 +65,6 @@
 }
 
 .todosContainer {
-  overflow-y: scroll;
   width: 80vw;
   display: flex;
   flex-direction: column;
@@ -158,4 +161,13 @@
 
 .todoInputEdit::-webkit-input-placeholder { 
   color:  #fef6cd; 
+}
+
+.incompleta {
+  border: 3px solid #3f887f;
+  border-radius: 40px;
+}
+
+.completada {
+  background-color: greenyellow;
 }

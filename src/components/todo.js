@@ -2,7 +2,9 @@ import { useState } from "react";
 
 export default function Todo ({item,onUpdate,onDelete}) {
     const [isEdit,setIsEdit]=useState(false);
+    
 
+    
     function Formedit(){
         const [newValue,setNewValue]=useState(item.title); //FUNCION PARA EDITAR EL FOMRMULARIO
         function handleSubmit(e){
@@ -22,7 +24,7 @@ export default function Todo ({item,onUpdate,onDelete}) {
 
         return(
             <form className="todoUpdateForm" onSubmit={handleSubmit}> {/*ACA RETORNO UN FORMULARIO PARA EL EDIT */}
-                <input type="text" className="todoInputEdit" onChange={handleChange} placeholder="edite su tarea" value={newValue}/>  
+                <input type="text" className="todoInputEdit" onChange={handleChange} placeholder="Edite su tarea" value={newValue}/>  
                 <button className="button-Update" onClick={handleClickUpdateTodo}>Actualizar</button>
             </form>
         )
@@ -32,7 +34,7 @@ export default function Todo ({item,onUpdate,onDelete}) {
     function chequeo(titulo){
         if (titulo===""){
             return(
-                "tarea vacía, editela o borrela"
+                "Tarea vacía"
             )
         }
         else{
@@ -41,14 +43,14 @@ export default function Todo ({item,onUpdate,onDelete}) {
             )
         }
     }
-
     
+
 
     function TodoElement(){
         return(
             <div className="todoInfo">  {/*ACA RETORNO EL HTML DE LA TAREA*/}
                     <span>
-                        {chequeo(item.title)}
+                         {chequeo(item.title)}
                     </span>
                     <div className="botones">
                         <button className="button-edit-task" onClick={()=>setIsEdit(true)}>Editar</button>
